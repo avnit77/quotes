@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import QuoteFetcher from './QuoteFetcher';
-import { getSimpsonsQuote, getRonQuote } from '../services/quotesApi';
+import QuoteFetcher from './QuoteFetcherClass';
+import { getRonQuote } from '../services/quotesApi';
 
 jest.mock('../services/quotesApi.js', () => ({
   getSimpsonsQuote: jest.fn(() => Promise.resolve()),

@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Quote.css';
 
 const Quote =  ({ text, name, img }) => (
-  <figure>
+  <figure className={styles.Quote}>
     <img src={img} />
     <figcaption>&quot;{text}&quot;{name ? ` -- by ${name}` : ''}</figcaption>
   </figure>

@@ -1,0 +1,15 @@
+.Quote {
+    background: lightgray;
+    padding: 30px;
+    img {
+      height: 500px;
+      border: 2px black solid;
+      padding: 40px;
+      background: whitesmoke;
+    }
+    figcaption {
+        font-size: large;
+        color: brown;
+        padding: 10px;
+    }
+  }
