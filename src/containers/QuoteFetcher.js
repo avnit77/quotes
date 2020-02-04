@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getRonQuote } from '../services/quotesApi';
-import Quote from '../components/quotes/Quote';
-import Button from '../components/commons/button/Button';
+import Quote from '../components/Quotes/Quote';
+import Button from '../components/Button/Button';
 
 const quoteProviderFactory = {
   ron: getRonQuote
