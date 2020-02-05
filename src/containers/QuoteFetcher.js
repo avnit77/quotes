@@ -4,7 +4,6 @@ import Quote from '../components/Quotes/Quote';
 import Button from '../components/Button/Button';
 
 const QuoteFetcher = () => {
-  // [state, setState]
   const [quote, setQuote] = useState({ quote: '', name: '', image: '' });
   useEffect(() => {
     getRonQuote()
