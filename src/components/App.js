@@ -1,10 +1,10 @@
 import React from 'react';
-import QuoteFetcher from '../containers/QuoteFetcher';
+import Quotes from '../components/Quotes/Quotes';
 
 export default function App() {
   return (
 
-    <QuoteFetcher />
+    <Quotes />
 
   );
 }
