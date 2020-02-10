@@ -4,3 +4,8 @@ export const getRonQuote = () => {
     .then(res => res.json());
 };
 
+export const searchRonQuote = (searchTerm)=> {
+  return fetch(`https://ron-swanson-quotes.herokuapp.com/v2/quotes/?${searchTerm}`)
+    .then(res => res.json());
+};
+

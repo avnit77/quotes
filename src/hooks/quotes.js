@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getRonQuote } from '../services/quotesApi';
+import { getRonQuote, searchRonQuote } from '../services/quotesApi';
 
 export const useQuotes = () => {
   const [url, setUrl] = useState('');
@@ -15,14 +15,21 @@ export const useQuotes = () => {
     setNumQuotes(numQuotes);
   };
 
-  const searchQuotes = (searchTerm) => {
-    setQuotes(quotes);
-    setUrl(`https://ron-swanson-quotes.herokuapp.com/v2/quotes/${searchTerm}/1`);
-  };
-
   const handleClick = (url) => {
     setUrl(url);
   };
 
   return { quotes, handleClick, handleNumQuotesChange, searchQuotes, numQuotes };
 };
+
+export const searchQuotes = searchTerm => {
+  const [quotes, setQuotes] = useState({});
+
+  useEffect(() => {
+    searchRonQuote(searchTerm)
+      .then(quote => setQuotes(quote));
+  }, [quotes]);
+
+  return { quotes };
+};
+
